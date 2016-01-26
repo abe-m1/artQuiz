@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="artQuiz">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Art Quiz</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+  <div id="artQuiz" ng-controller="QuizController">
+    <h1>Test Your Knowledge:<span>Modern Art</span></h1>
+    <div class="progress">
+      <div class="{{ ($index === activeQuestion)? 'on' : 'off'}}
+        {{ (myQuestion.questionState === 'answered' )? 'answered' : 'unanswered'}}
+        {{ (myQuestion.correctness === 'correct')? 'correct': 'incorrect'}}
+      " ng-repeat="myQuestion in myQuestions"></div>
+    </div>
+    <div class="intro {{ (activeQuestion >-1) ? 'inactive' : 'active' }}">
+      <h2>Welcome</h2>
+      <p>click start to test your art Knowledge</p>
+      <p class="btn" ng-click="activeQuestion = 0">Start</p>
+    </div>
+    <div style="text-align: center" class="question 
+      {{ ($index === activeQuestion) ? 'active' : 'inactive'}}
+      {{ (myQuestion.questionState === 'answered') ? 'answered' : 'unanswered'}}
+
+    " ng-repeat="myQuestion in myQuestions">
+      <img class="txt clearfix" ng-src="{{myQuestion.question}}" style="margin: 10px auto; border: 4px solid white; border-radius: 5px">
+
+      </img>
+      <p class="ans" 
+      ng-class= "{ selected: isSelected($parent.$index, $index), 
+              correct: isCorrect($parent.$index, $index)}"
+      ng-click="selectAnswer($parent.$index, $index )"
+      ng-repeat="Answer in myQuestions[$index].answers">{{Answer.text}}</p>
+      
+      <div class="feedback">
+        <p ng-show="myQuestion.correctness === 'correct'">you are <strong>correct</strong></p>
+        <p ng-show="myQuestion.correctness === 'incorrect'">you are incorrect</p>
+        <!-- <p>additional feedback</p> -->
+        <div ng-click="selectContinue()" class="btn">continue</div>
+      </div>
+    </div>
+    <div class="results">
+      <h3>results</h3>
+      <p>you scored x% by correctly answering x of the total x questions</p>
+      <p>use the links below to challenge your friends</p>
+      <div class="share">Share links go here</div>
+    </div>
+  </div>
+
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/quiz.js"></script>
+</body>
+</html>

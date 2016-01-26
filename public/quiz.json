@@ -1,0 +1,103 @@
+[
+{
+  "question" : "img/cafe.jpg",
+  "answers": [
+    {"id": 0, "text": "Vincent Van Gogh"},
+    {"id": 1, "text": "Pablo Picasso"},
+    {"id": 2, "text": "Jeff Coons"},
+    {"id": 3, "text": "Marcel Duchamp"}
+  ],
+  "correct": 0
+},
+{
+  "question" : "img/hopper.jpg",
+  "answers": [
+    {"id": 0, "text": "Barbara Hepworth"},
+    {"id": 1, "text": "Ed Ruscha"},
+    {"id": 2, "text": "Dan Flavin"},
+    {"id": 3, "text": "Edward Hopper"}
+  ],
+  "correct": 3
+},
+{
+  "question" : "img/pollack.jpg",
+  "answers": [
+    {"id": 0, "text": "Jean Dubuffet"},
+    {"id": 1, "text": "Jackson Pollack"},
+    {"id": 2, "text": "Joan Miro"},
+    {"id": 3, "text": "Wassily Kandinsky"}
+  ],
+  "correct": 1
+},
+{
+  "question" : "img/munch.jpg",
+  "answers": [
+    {"id": 0, "text": "Clyfford Still"},
+    {"id": 1, "text": "Jean Arp"},
+    {"id": 2, "text": "Kasimir Malevich"},
+    {"id": 3, "text": "Edvard Munch"}
+  ],
+  "correct": 3
+},
+{
+  "question" : "img/dali.jpg",
+  "answers": [
+    {"id": 0, "text": "Yves Tanguy"},
+    {"id": 1, "text": "Meret Oppenheim"},
+    {"id": 2, "text": "Salvador Dali"},
+    {"id": 3, "text": "Damien Hirst"}
+  ],
+  "correct": 2
+},
+{
+  "question" : "img/lichtenstein.jpg",
+  "answers": [
+    {"id": 0, "text": "Gustav Klimt"},
+    {"id": 1, "text": "Roy Lichtenstein"},
+    {"id": 2, "text": "Sonia Delaunay"},
+    {"id": 3, "text": "Marc Chagall"}
+  ],
+  "correct": 1
+},
+{
+  "question" : "img/modigliani.jpg",
+  "answers": [
+    {"id": 0, "text": "Paul Cezanne"},
+    {"id": 1, "text": "Auguste Rodin"},
+    {"id": 2, "text": "Barbara Hepworth"},
+    {"id": 3, "text": "Amedeo Modigliani"}
+  ],
+  "correct": 3
+},
+{
+  "question" : "img/picasso.jpg",
+  "answers": [
+    {"id": 0, "text": "Pablo Picasso"},
+    {"id": 1, "text": "Grant Wood"},
+    {"id": 2, "text": "Willem De Kooning"},
+    {"id": 3, "text": "Giorgio De Chirico"}
+  ],
+  "correct": 0
+},
+{
+  "question" : "img/magritte.jpg",
+  "answers": [
+    {"id": 0, "text": "Natalia Gontcharova"},
+    {"id": 1, "text": "Ellsworth Kelly"},
+    {"id": 2, "text": "Rene Magritte"},
+    {"id": 3, "text": "Alberto Giacometti"}
+  ],
+  "correct": 2
+},
+{
+  "question" : "img/rothko.jpg",
+  "answers": [
+    {"id": 0, "text": "Donald Judd"},
+    {"id": 1, "text": "Mark Rothko"},
+    {"id": 2, "text": "Andy Warhol"},
+    {"id": 3, "text": "Georges Braque"}
+  ],
+  "correct": 1
+}
+
+]

@@ -1,0 +1,273 @@
+@import url(https://fonts.googleapis.com/css?family=Chelsea+Market);
+
+body { 
+  background-color: #fff;
+  padding: 20px;  
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+
+
+#artQuiz {
+  font-family: 'Chelsea Market', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  width: 650px;
+  height: 650px;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0f1721+0,1f3051+44,275c93+100 */
+background: #0f1721; /* Old browsers */
+background: -moz-linear-gradient(top, #0f1721 0%, #1f3051 44%, #275c93 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #0f1721 0%,#1f3051 44%,#275c93 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #0f1721 0%,#1f3051 44%,#275c93 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f1721', endColorstr='#275c93',GradientType=0 ); /* IE6-9 */
+copy
+}
+
+#artQuiz h1 {
+  font-weight: 100;
+  font-size: 2em;
+  text-transform: uppercase;
+  margin: 0px;
+  position: absolute;
+  top:25px;
+  left: 36px;
+  font-family: sans-serif;
+}
+
+#artQuiz h1 span {
+  display: block;
+  /*this will put span on its own line*/
+  font-weight: 900;
+  font-size: 2.8em;
+  line-height: 75px;
+  font-family: 'Chelsea Market', sans-serif;
+}
+#artQuiz h2 {
+  font-size: 3em;
+  margin: 0px;
+  font-weight: 100;
+}
+
+#artQuiz h3 {
+  font-size: 2.4em;
+  margin: 0px;
+  font-weight: 100;
+}
+
+#artQuiz p {
+  margin: 0px 0px 14px 0px;
+}
+
+#artQuiz .btn {
+  display: inline-block;
+  cursor: pointer;
+  background-color: #C04B01;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 15px;
+  border-radius: 6px;
+}
+
+/*progress*/
+#artQuiz .progress {
+  width: 550px;
+  position: absolute;
+  top: 160px;
+  left: 40px;
+}
+
+#artQuiz .progress div {
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 24px;
+  border-radius: 50%;
+  background-color: rgba(255, 255,255, .2);
+  transition: background-color 1s;
+}
+
+#artQuiz .progress div::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -60px;
+  /*left: -10px;*/
+  width: 25px;
+  height: 25px;
+  background: #00bff3 no-repeat 0 0;
+  border-radius: 50%;
+  transition:opacity 1s, top 1s;
+  opacity: 0
+}
+
+#artQuiz .progress div.on, 
+#artQuiz .progress div.answered {
+  background-color: #39b54a;
+}
+
+#artQuiz .progress div.correct::after {
+  top: 0px;
+  opacity: 1;
+}
+
+
+
+/*INTRO SECTION*/
+#artQuiz .intro {
+  position: absolute;
+  top: 225px;
+  left: 660px;
+  width: 550px;
+}
+
+#artQuiz .intro p {
+  margin: 0px 0px 40px 0px;
+}
+
+#artQuiz .question {
+  width: 550px;
+  position: absolute;
+  top: 225px;
+  left: 660px;
+
+}
+
+#artQuiz .question .txt {
+  font-size: 1.6em;
+  margin: 0px 0px 20px 0px;
+}
+
+#artQuiz .question .ans {
+  display: inline-block;
+  /*so answers can appear side by side*/
+  font-size: 1.1em;
+  width: 225px;
+  border: 2px solid rgba(238, 189, 102, .4);
+  border-radius: 6px;
+  padding: 10px;
+  margin: 0px 15px 15px 0px;
+  position: relative;
+  /*we need this b/c later we will be putting in graphics*/
+}
+
+#artQuiz .question .ans.selected {
+  border-color: #be4b16;
+}
+
+#artQuiz .question .ans.correct {
+  border-color: #459a16;
+}
+
+#artQuiz .question .ans::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  background:  no-repeat 0 0;
+  background-size: 20px 20px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+
+#artQuiz .question .ans.selected::after {
+  background-image: url(../img/icon_incorrect.svg)
+}
+
+#artQuiz .question .ans.correct::after {
+  background-image: url(../img/icon_correct.svg)
+}
+
+#artQuiz .question.unanswered .ans {
+  cursor: pointer;
+}
+
+#artQuiz .question.unanswered .ans:hover {
+  background-color: rgba(109, 207, 243, .4);
+}
+
+#artQuiz .question.answered .ans {
+  cursor: default;
+}
+
+/*feedback*/
+
+#artQuiz .feedback {
+  color: #efbe5e;
+  margin-top: 50px;
+  transition: opacity 1.5s margin-top 1.5s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#artQuiz .feedback .btn {
+  margin-top: 5px;
+}
+
+#artQuiz .feedback strong {
+  color: #fff;
+}
+
+#artQuiz .answered .feedback {
+  visibility: visible;
+  opacity: 1;
+  margin-top: 10px;
+}
+
+/*Results*/
+#artQuiz .results {
+  position: absolute;
+  top: 225px;
+  left: 660px;
+  width: 550px;
+}
+
+#artQuiz .results .share a.btn {
+  margin-right: 20px;
+  padding: 9px 15px  8px 42px;
+  background-repeat: no-repeat;
+  background-position: 10px 5px;
+  background-size: 25px 25px;
+}
+
+#artQuiz .results .share a.btn.email {
+  background-color: #f0a121;
+  background-image: url(../images/icon_email.svg)
+}
+
+#artQuiz .results .share a.btn.twitter {
+  background-color: #59adeb;
+  background-image: url(../images/icon_twitter.svg)
+}
+
+#artQuiz .active, #artQuiz .inactive {
+  transition: left 1.5s ease-in-out;
+}
+
+#artQuiz .active {
+  left: 40px;
+}
+
+#artQuiz .intro.inactive,
+#artQuiz.inactive.answered {
+  left: -1350px;
+  }
