@@ -271,3 +271,110 @@ copy
 #artQuiz.inactive.answered {
   left: -1350px;
   }
+
+.score {
+  color: yellow;
+  font-size: 2em;
+}
+
+
+@media screen and (max-width: 650px) {
+  body { 
+    padding: 0;
+    margin: 0;
+  }
+  #artQuiz {
+    width: 320px;
+    background-size: 320px auto;
+
+  }
+  #artQuiz h1 {
+    width: 320px;
+    font-size: 1.3em;
+    top: 25px;
+    left: 25px;
+  }
+  #artQuiz h1 span {
+    line-height: 43px;
+  }
+  #myQuz h2 {
+    margin: 0px;
+  }
+  #artQuiz h3 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+  }
+ /* #artQuiz .progress  {
+    width: 300px;
+    top: 110px;
+    left: 25px;
+  }
+  #artQuiz .progress div {
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+  }
+  #artQuiz .progress div::after {
+    top: -30px;
+    width: 53px;
+    height: 33px;
+  }*/
+
+  #artQuiz .progress{
+    display: none ;
+  }
+
+  #artQuiz .intro {
+    width: 300px;
+    top: 135px;
+    left: 330px;
+  }
+
+  #artQuiz .question {
+    width: 300px;
+    top: 135px;
+    left: 330px;
+  }
+
+  #artQuiz .question .txt {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+  }
+
+  #artQuiz .question .ans {
+    font-size: 1em;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+  }
+
+  #artQuiz .question .ans.image {
+    min-height: 45px;
+    background-size: auto 45px;    
+  }
+
+  #artQuiz .question .ans.image:hover {
+    background-color: #000;
+  }
+
+  #artQuiz .results {
+    width: 260px;
+    top: 150px;
+    left: 330px;
+  }
+
+  #artQuiz .results .share {
+    margin-top: 20px;    
+  }
+
+  #artQuiz .results a.btn {
+    margin-bottom: 20px;
+  }
+
+  #artQuiz .active {
+    left: 25px;
+  }
+
+  #artQuiz .intro.inactive, #artQuiz .inactive.answered {
+    left: -650px;
+  }
+}
