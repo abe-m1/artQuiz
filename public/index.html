@@ -8,7 +8,7 @@
 </head>
 <body>
   <div id="artQuiz" ng-controller="QuizController">
-    <h1>Test Your Knowledge:<span>Modern Art</span></h1>
+    <h1 class="{{(activeQuestion >-1) ? 'hideMe' : 'no' }}">Test Your Knowledge:<span>Modern Art</span></h1>
     <div class="progress">
       <div class="{{ ($index === activeQuestion)? 'on' : 'off'}}
         {{ (myQuestion.questionState === 'answered' )? 'answered' : 'unanswered'}}

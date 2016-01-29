@@ -40,7 +40,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f1721', end
 copy
 }
 
-#artQuiz h1 {
+#artQuiz  h1 {
   font-weight: 100;
   font-size: 2em;
   text-transform: uppercase;
@@ -51,7 +51,7 @@ copy
   font-family: sans-serif;
 }
 
-#artQuiz h1 span {
+#artQuiz  h1 span {
   display: block;
   /*this will put span on its own line*/
   font-weight: 900;
@@ -296,9 +296,12 @@ copy
   }
   #artQuiz h1 span {
     line-height: 43px;
+    font-size: 2em;
+
   }
-  #myQuz h2 {
+  #myQuiz h2 {
     margin: 0px;
+
   }
   #artQuiz h3 {
     font-size: 2.2em;
@@ -332,7 +335,7 @@ copy
 
   #artQuiz .question {
     width: 300px;
-    top: 135px;
+    top: 35px;
     left: 330px;
   }
 
@@ -350,6 +353,10 @@ copy
   #artQuiz .question .ans.image {
     min-height: 45px;
     background-size: auto 45px;    
+  }
+
+  #artQuiz .question .active {
+    top: 20px;
   }
 
   #artQuiz .question .ans.image:hover {
@@ -376,5 +383,9 @@ copy
 
   #artQuiz .intro.inactive, #artQuiz .inactive.answered {
     left: -650px;
+  }
+
+  .hideMe {
+    display: none;
   }
 }
